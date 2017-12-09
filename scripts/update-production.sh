@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ../pax/
-git pull --rebase upstream master
+git pull upstream master
 if  [ $? -eq 0 ]; then
     npm install
     if [ $? -eq 0 ]; then
