@@ -45,7 +45,7 @@ const execBuild = (cb) => {
 
 // ROUTING
 app.post('/admin/build', (req, res) => {
-  if (req.body.action === 'closed' || req.body.action === 'unlabeled' && req.body.merged === 'true') {
+  if (req.body.action === 'closed' && req.body.merged === 'true') {
     res.send('BUILDING');
     execBuild((err, success) => {
       if (err) {
