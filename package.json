@@ -1,0 +1,49 @@
+{
+  "name": "pax-ci",
+  "version": "0.0.1",
+  "description": "Admin and build microservice for pax",
+  "main": "pax-ci.js",
+  "scripts": {
+    "lint-fix": "./node_modules/.bin/eslint --color --fix",
+    "lint-fix-all": "./node_modules/.bin/eslint --color --fix --ignore-pattern 'node_modules /' --ignore-pattern 'tests/' --ignore-pattern 'bundle.js' .",
+    "lint-show": "./node_modules/.bin/eslint --color",
+    "lint-show-all": "./node_modules/.bin/eslint --color --ignore-pattern 'node_modules /' --ignore-pattern 'tests/' --ignore-pattern 'bundle.js' .",
+    "test": "eslint **/*.js --ignore-pattern 'node_modules /' --ignore-pattern 'tests/'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pax-atlantica/pax-ci.git"
+  },
+  "keywords": [],
+  "author": "Alexander Mire, David Wen Riccardi-Zhu, Katelyn Stamas, Nicholas Orr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pax-atlantica/pax-ci/issues"
+  },
+  "homepage": "https://github.com/pax-atlantica/pax-ci#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7",
+    "shelljs": "^0.7.8"
+  }
+}
