@@ -1,7 +1,7 @@
 #!/bin/bash
 cd ../
 git fetch --all
-git reset --hard origin/master
+git reset --hard upstream/master
 if  [ $? -eq 0 ]; then
     npm install
     if [ $? -eq 0 ]; then
