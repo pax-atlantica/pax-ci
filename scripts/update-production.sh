@@ -1,6 +1,7 @@
 #!/bin/bash
 cd ../pax/
-git pull upstream master
+git fetch --all
+git reset --hard origin/master
 if  [ $? -eq 0 ]; then
     npm install
     if [ $? -eq 0 ]; then
