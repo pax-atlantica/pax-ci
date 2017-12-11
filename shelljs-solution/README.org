@@ -1,0 +1,2 @@
+VERSION WITH shelljs instead of the bare shell version which is on root
+
