@@ -11,7 +11,7 @@ if  [ $? -eq 0 ]; then
             exit 0
         else
             printf 'Something went wrong with pm2.'
-            exit 4
+            exit 3
         fi
     else
         printf 'Something went wrong with npm install.'
