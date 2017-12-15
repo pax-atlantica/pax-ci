@@ -5,19 +5,13 @@ git reset --hard upstream/master
 if  [ $? -eq 0 ]; then
     npm install
     if [ $? -eq 0 ]; then
-        npm run postinstall
+        pm2 restart server-index
         if [ $? -eq 0 ]; then
-            pm2 restart server-index
-            if [ $? -eq 0 ]; then
-                printf 'Update completed successfully.'
-                exit 0
-            else
-                printf 'Something went wrong with pm2.'
-                exit 4
-            fi
+            printf 'Update completed successfully.'
+            exit 0
         else
-            printf 'Something went wrong with npm run build.'
-            exit 3
+            printf 'Something went wrong with pm2.'
+            exit 4
         fi
     else
         printf 'Something went wrong with npm install.'
