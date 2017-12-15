@@ -12,11 +12,8 @@ app.use(bodyParser.json());
 // SETUP
 fs.access('./logs/build.log', err => {
   if (err) {
-    fs.writeFileSync('./logs/build.log', '', (err) => {
-      if (err) {
-        console.error('There was an error creating the build log.');
-      }
-    });
+    fs.mkdirSync('./logs');
+    fs.writeFileSync('./logs/build.log', '');
   }
 });
 
