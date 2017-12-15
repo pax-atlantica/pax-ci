@@ -5,7 +5,7 @@ git reset --hard upstream/master
 if  [ $? -eq 0 ]; then
     npm install
     if [ $? -eq 0 ]; then
-        npm run build
+        npm run postinstall
         if [ $? -eq 0 ]; then
             pm2 restart server-index
             if [ $? -eq 0 ]; then
