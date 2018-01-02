@@ -5,7 +5,7 @@ git reset --hard upstream/master
 if  [ $? -eq 0 ]; then
     npm install
     if [ $? -eq 0 ]; then
-        pm2 restart server-index
+        pm2 restart index
         if [ $? -eq 0 ]; then
             printf 'Update completed successfully.'
             exit 0
